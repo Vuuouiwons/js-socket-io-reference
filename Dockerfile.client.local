@@ -1,0 +1,7 @@
+FROM socket:base
+
+WORKDIR /app
+
+COPY ./client .
+
+

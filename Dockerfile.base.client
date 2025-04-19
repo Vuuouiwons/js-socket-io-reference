@@ -1,0 +1,9 @@
+FROM node:alpine3.21
+
+WORKDIR /app
+
+COPY ./client/package.json .
+
+RUN npm install
+
+# docker image build --tag socket-client:base --file Dockerfile.base
