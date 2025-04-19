@@ -1,7 +1,7 @@
-FROM socket:base
+FROM socket-client:base
 
 WORKDIR /app
 
 COPY ./client .
 
-
+CMD [ "npm", "run", "dev" ]

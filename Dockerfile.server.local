@@ -1,4 +1,4 @@
-FROM socket:base
+FROM socket-server:base
 
 WORKDIR /app
 

@@ -6,4 +6,4 @@ COPY ./server/package.json .
 
 RUN npm install
 
-# docker image build --tag socket-server:base --file Dockerfile.base
+# docker image build --tag socket-server:base --file Dockerfile.base.server .
