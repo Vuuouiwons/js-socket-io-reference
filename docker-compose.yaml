@@ -2,7 +2,7 @@ services:
   socket-server:
     container_name: rnd-socket-server
     build:
-      context: .
+      context: ./server
       dockerfile: Dockerfile.server.local
     ports:
       - 3000:3000
@@ -13,7 +13,7 @@ services:
   socket-client-1:
     container_name: rnd-socket-client-1
     build:
-      context: .
+      context: ./client
       dockerfile: Dockerfile.client.local
     restart: always
     networks:

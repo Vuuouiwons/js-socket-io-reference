@@ -2,7 +2,7 @@ FROM socket-server:base
 
 WORKDIR /app
 
-COPY ./server .
+COPY . .
 
 # CMD ["while sleep 3600; do :; done"]
 
