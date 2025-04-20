@@ -8,7 +8,7 @@ io.on('connection', (socket) => {
     console.log(`${socket.id} connected`);
     
     socket.on('disconnect', () => {
-        console.log('User disconnected')
+        console.log(`User ${socket.id} disconnected`)
     });
 
     socket.on('chat', (data) => {
