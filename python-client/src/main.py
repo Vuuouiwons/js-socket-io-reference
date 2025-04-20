@@ -7,6 +7,10 @@ import time
 
 logger = logging.getLogger(__name__)
 logging.basicConfig(level=logging.INFO)
+
+
+HOST = os.getenv("HOST", "localhost")
+
 sio = socketio.Client()
 
 logger.info('waitting for server initialization')
@@ -21,7 +25,8 @@ def connect():
 def chat(data):
     logger.info(f'python client: hey chat from {sio.sid} with {data}')
 
-sio.connect(f'ws://{os.getenv("HOST", "localhost")}:3000', transports=['websocket'])
+
+sio.connect(f'ws://{HOST}:3000', transports=['websocket'])
 
 for i in range(3):
     logger.info(f'python emitting: python data client {i}')
