@@ -1,6 +1,6 @@
 services:
   socket-server:
-    container_name: rnd-socket-server
+    container_name: socket-server
     build:
       context: ./server
       dockerfile: Dockerfile.local
@@ -10,8 +10,8 @@ services:
     networks:
       - socket-test
 
-  socket-client-1:
-    container_name: rnd-socket-client-1
+  js-socket-client-1:
+    container_name: js-socket-client-1
     build:
       context: ./js-client
       dockerfile: Dockerfile.local
