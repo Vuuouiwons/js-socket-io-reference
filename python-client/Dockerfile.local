@@ -1,0 +1,5 @@
+FROM socket-client-python:base
+
+COPY ./src .
+
+CMD ["python", "main.py"]
