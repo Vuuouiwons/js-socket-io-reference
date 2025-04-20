@@ -1,7 +1,9 @@
 
 const { io } = require("socket.io-client");
 
-const socket = io(`ws://${process.env.HOST}:3000`);
+const HOST = process.env.HOST || 'localhost';
+
+const socket = io(`ws://${HOST}:3000`);
 
 console.log('js client: hello world!');
 
