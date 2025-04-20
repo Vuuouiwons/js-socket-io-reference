@@ -1,6 +1,7 @@
 services:
   socket-server:
     container_name: socket-server
+    image: js-socket-server
     build:
       context: ./server
       dockerfile: Dockerfile.local
@@ -12,6 +13,7 @@ services:
 
   js-socket-client-1:
     container_name: js-socket-client-1
+    image: js-socket-client
     build:
       context: ./js-client
       dockerfile: Dockerfile.local
@@ -23,6 +25,7 @@ services:
   
   python-socket-client-1:
     container_name: python-socket-client-1
+    image: python-socket-client
     build:
       context: ./python-client
       dockerfile: Dockerfile.local
