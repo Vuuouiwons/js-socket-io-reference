@@ -18,6 +18,33 @@ services:
     restart: always
     networks:
       - socket-test
+  
+  socket-client-2:
+    container_name: rnd-socket-client-2
+    build:
+      context: ./client
+      dockerfile: Dockerfile.client.local
+    restart: always
+    networks:
+      - socket-test
+  
+  socket-client-3:
+    container_name: rnd-socket-client-3
+    build:
+      context: ./client
+      dockerfile: Dockerfile.client.local
+    restart: always
+    networks:
+      - socket-test
+  
+  socket-client-4:
+    container_name: rnd-socket-client-4
+    build:
+      context: ./client
+      dockerfile: Dockerfile.client.local
+    restart: always
+    networks:
+      - socket-test
 
 networks:
   socket-test:
