@@ -3,7 +3,7 @@ services:
     container_name: rnd-socket-server
     build:
       context: ./server
-      dockerfile: Dockerfile.server.local
+      dockerfile: Dockerfile.local
     ports:
       - 3000:3000
     restart: always
@@ -13,8 +13,10 @@ services:
   socket-client-1:
     container_name: rnd-socket-client-1
     build:
-      context: ./client
-      dockerfile: Dockerfile.client.local
+      context: ./js-client
+      dockerfile: Dockerfile.local
+    environment:
+      - HOST=socket-server
     restart: always
     networks:
       - socket-test
