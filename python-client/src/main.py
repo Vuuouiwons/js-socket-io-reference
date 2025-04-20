@@ -4,7 +4,6 @@ import logging
 import time
 
 
-
 logger = logging.getLogger(__name__)
 logging.basicConfig(level=logging.INFO)
 
@@ -15,6 +14,7 @@ sio = socketio.Client()
 
 logger.info('waitting for server initialization')
 time.sleep(1)
+
 
 @sio.event
 def connect():
