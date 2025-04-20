@@ -1,7 +1,7 @@
 
 const { io } = require("socket.io-client");
 
-const socket = io("ws://socket-server:3000");
+const socket = io(`ws://${process.env.HOST}:3000`);
 
 console.log('js client: hello world!');
 
@@ -14,6 +14,6 @@ socket.on('chat', (data) => {
 });
 
 for (let i = 0; i < 3; i++) {
-  console.log(`js emitting: data client ${i}`);
+  console.log(`js emitting: js data client ${i}`);
   socket.emit('chat', `js data client ${i}`);
 }
