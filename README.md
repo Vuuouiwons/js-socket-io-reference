@@ -55,19 +55,19 @@ A minimalistic and practical reference for setting up a real-time WebSocket serv
 
 ### Server
 
-- **Location**: `/server/src/index.js`
+- **Location**: [`/server/src/index.js`](server/src/index.js)
 
 - **Description**: Sets up a Socket.IO server that listens for `chat` events. Upon receiving a message, it processes and emits a modified response back to the client.
 
 ### JavaScript Client
 
-- **Location**: `/js-client/src/index.js`
+- **Location**: [`/js-client/src/index.js`](js-client/src/index.js)
 
 - **Description**: Connects to the Socket.IO server and emits three distinct messages using the `chat` event. Listens for responses from the server and logs them to the console.
 
 ### Python Client
 
-- **Location**: `/python-client/src/main.py`
+- **Location**: [`/python-client/src/main.py`](python-client/src/main.py)
 
 - **Description**: Utilizes the `python-socketio` library to connect to the Socket.IO server. Sends three messages via the `chat` event and handles incoming responses by printing them to the console.
 
