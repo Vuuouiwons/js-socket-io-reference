@@ -6,4 +6,4 @@ COPY ./package.json .
 
 RUN npm install
 
-# docker image build --tag socket-client:base --file Dockerfile.base .
+# docker image build --tag js-socket-client:base --file Dockerfile.base .

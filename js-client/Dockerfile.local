@@ -1,4 +1,4 @@
-FROM socket-client:base
+FROM js-socket-client:base
 
 WORKDIR /app
 
