@@ -57,35 +57,35 @@ A minimalistic and practical reference for setting up a real-time WebSocket serv
 
 - **Location**: `/server/src/index.js`
 
-- **Description**: Sets up a Socket.IO server that listens for `chat` events. Upon receiving a message, it processes and emits a modified response back to the client.
+- **Description**: Sets up a Socket.IO server that listens for `chat` events. Upon receiving a message, it processes and emits a modified response back to the client.
 
 ### JavaScript Client
 
 - **Location**: `/js-client/src/index.js`
 
-- **Description**: Connects to the Socket.IO server and emits three distinct messages using the `chat` event. Listens for responses from the server and logs them to the console.
+- **Description**: Connects to the Socket.IO server and emits three distinct messages using the `chat` event. Listens for responses from the server and logs them to the console.
 
 ### Python Client
 
 - **Location**: `/python-client/src/main.py`
 
-- **Description**: Utilizes the `python-socketio` library to connect to the Socket.IO server. Sends three messages via the `chat` event and handles incoming responses by printing them to the console.
+- **Description**: Utilizes the `python-socketio` library to connect to the Socket.IO server. Sends three messages via the `chat` event and handles incoming responses by printing them to the console.
 
 ## Docker Compose Configuration
 
-The `docker-compose.yaml` file defines three services:
+The `docker-compose.yaml` file defines three services:
 
-- **socket-server**: Builds and runs the Socket.IO server.
+- **socket-server**: Builds and runs the Socket.IO server.
 
-- **js-socket-client-1**: Builds and runs the JavaScript client.
+- **js-socket-client-1**: Builds and runs the JavaScript client.
 
-- **python-socket-client-1**: Builds and runs the Python client.
+- **python-socket-client-1**: Builds and runs the Python client.
 
-All services are connected via the `socket-test` Docker network, facilitating seamless inter-service communication using service names as hostnames.
+All services are connected via the `socket-test` Docker network, facilitating seamless inter-service communication using service names as hostnames.
 
 ## Environment Variables
 
-Each client can be configured using environment variables. For instance, to specify the server host:
+Each client can be configured using environment variables. For instance, to specify the server host:
 
 - **JavaScript Client**:
   ```bash
@@ -93,9 +93,9 @@ Each client can be configured using environment variables. For instance, to spec
   ```
 
 - **Python Client**:
-  Set the server URL accordingly in the code or via environment variables.
+  Set the server URL accordingly in the code or via environment variables.
 
 ## Notes
 
-- **Extensibility**: This setup serves as a foundational reference. Feel free to extend it by adding more events, implementing authentication, or integrating with databases.
+- **Extensibility**: This setup serves as a foundational reference. Feel free to extend it by adding more events, implementing authentication, or integrating with databases.
 
